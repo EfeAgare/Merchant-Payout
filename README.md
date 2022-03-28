@@ -1,4 +1,4 @@
-# Backend coding challenge
+# Merchant Payout
 This help to calculate how much money should be disbursed to each merchant based on the following rules:
 
 * Disbursements are done weekly on Monday.
@@ -45,14 +45,28 @@ ID | MERCHANT ID | SHOPPER ID | AMOUNT | CREATED AT           | COMPLETED AT
 5  | 8           | 1683       | 213.97 | 01/01/2017 19:12:00  | 01/08/2017 14:12:43
 ```
 
-## Instructions
-* Please read carefully the challenge and if you have any doubt or need extra info please don't hesitate to ask us before starting.
-* You shouldn't spend more than 3h on the challenge.
-* Design, test, develop and document the code. It should be a performant, clean and well structured solution. Then send us a link or a zip with a git repo.
-* You should consider this code ready for production as it were a PR to be reviewed by a colleague. Also commit as if it were a real assignment.
-* Remember you're dealing with money, so you should be careful with related operations.
-* Create a README explaining how to setup and run your solution and a short explanation of your technical choices, tradeoffs, ...
-* You don't need to finish. We value quality over feature-completeness. If you have to leave things aside you can mention them on the README explaining why and how you would resolve them.
-* You can code the solution in a language of your choice, here are some technologies we are more familiar with (no particular order): JavaScript, Ruby, Python, Go, Elixir, Java, Scala, PHP.
-* Your experience level will be taken into consideration when evaluating.
+## Setup
+- Ensure you have [ruby](https://rvm.io/rvm/install) installed on your device
 
+  ```
+   Ruby = 3.0.0
+  ```
+
+  Clone this repository and cd into the clone specific folder and run the following command 
+  accordingly
+
+  ```
+   bundle install
+  ```
+
+  ```
+   rails db:create 
+  ```
+
+  ```
+   rails db:migrate
+  ```
+
+  ```
+   rails db:seed
+  ```

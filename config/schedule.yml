@@ -1,0 +1,4 @@
+merchant_disbursements_job:
+  cron: "0 03 * * 1" ## At 03:00 every Monday
+  class: "MerchantDisbursementsJob"
+  queue: default
