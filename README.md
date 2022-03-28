@@ -46,7 +46,7 @@ ID | MERCHANT ID | SHOPPER ID | AMOUNT | CREATED AT           | COMPLETED AT
 ```
 
 ## Setup
-- Ensure you have [ruby](https://rvm.io/rvm/install) installed on your device
+- Ensure you have [ruby](https://rvm.io/rvm/install) installed on your device and also [redis](https://phoenixnap.com/kb/install-redis-on-mac)
 
   ```
    Ruby = 3.0.0
@@ -70,3 +70,16 @@ ID | MERCHANT ID | SHOPPER ID | AMOUNT | CREATED AT           | COMPLETED AT
   ```
    rails db:seed
   ```
+
+  
+
+## Test 
+To run all test
+```
+rspec 
+```
+
+and to run a specific test 
+ ```
+ rspec 'relative path to file'
+ ```
