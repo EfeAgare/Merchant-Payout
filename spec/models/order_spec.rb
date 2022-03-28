@@ -1,5 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Order, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'association' do
+    it { should belong_to(:merchant) }
+    it { should belong_to(:shopper) }
+    it { should have_many(:disbursements) }
+  end
 end
