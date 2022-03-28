@@ -9,7 +9,7 @@ This help to calculate how much money should be disbursed to each merchant based
   * 0.85% for amounts over 300€
 
 ### Task Done
-* Create the necessary data structures and a way to persist them for the provided data by following the (provided schema)[https://www.dropbox.com/s/wms8dlqzs6bqkul/backend%20challenge%20dataset.zip?dl=0]
+* Create the necessary data structures and a way to persist them for the provided data by following the [provided schema](https://www.dropbox.com/s/wms8dlqzs6bqkul/backend%20challenge%20dataset.zip?dl=0)
 * Calculate and persist the disbursements per merchant on a given week. As the calculations can take some time it should be isolated and be able to run independently of a regular web request, for instance by running a background job.
 * Create an API endpoint to expose the disbursements for a given merchant on a given week. If no merchant is provided return for all of them.
 
