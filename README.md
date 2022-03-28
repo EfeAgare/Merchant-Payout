@@ -45,8 +45,15 @@ ID | MERCHANT ID | SHOPPER ID | AMOUNT | CREATED AT           | COMPLETED AT
 5  | 8           | 1683       | 213.97 | 01/01/2017 19:12:00  | 01/08/2017 14:12:43
 ```
 
+## Technologies
+  * Ruby
+  * Git
+  * Rspec
+  * Redis
+  * Sidekiq
+
 ## Setup
-- Ensure you have [ruby](https://rvm.io/rvm/install) installed on your device and also [redis](https://phoenixnap.com/kb/install-redis-on-mac)
+- Ensure you have [ruby](https://rvm.io/rvm/install) installed on your device and also [redis](https://phoenixnap.com/kb/install-redis-on-mac) for background processes
 
   ```
    Ruby = 3.0.0
@@ -71,7 +78,23 @@ ID | MERCHANT ID | SHOPPER ID | AMOUNT | CREATED AT           | COMPLETED AT
    rails db:seed
   ```
 
-  
+  After to run server
+
+  ```
+  rails s
+  ```
+
+## Background Processes
+
+Start sidekiq with 
+```
+sidekiq
+```
+Start redis, after [installation](https://phoenixnap.com/kb/install-redis-on-mac)
+
+```
+redis-server
+```
 
 ## Test 
 To run all test
