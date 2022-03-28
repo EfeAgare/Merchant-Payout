@@ -106,3 +106,10 @@ and to run a specific test
  ```
  rspec 'relative path to file'
  ```
+
+### Pending tasks:
+
+- Validate field in model and write spec
+- Display sidekiq web page
+- Write more model spec for order and disbursement 
+- 
