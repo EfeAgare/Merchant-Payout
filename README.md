@@ -13,8 +13,8 @@ This help to calculate how much money should be disbursed to each merchant based
 * Calculate and persist the disbursements per merchant on a given week. As the calculations can take some time it should be isolated and be able to run independently of a regular web request, for instance by running a background job.
 * Create an API endpoint to expose the disbursements for a given merchant on a given week. If no merchant is provided return for all of them.
 
-
-### MERCHANTS
+## SCHEMA
+- MERCHANTS
 
 ```
 ID | NAME                      | EMAIL                             | CIF
@@ -24,7 +24,7 @@ ID | NAME                      | EMAIL                             | CIF
 4  | Cummerata LLC             | info@cummerata-llc.com            | B611111114
 ```
 
-### SHOPPERS
+- SHOPPERS
 
 ```
 ID | NAME                 | EMAIL                              | NIF
@@ -34,7 +34,7 @@ ID | NAME                 | EMAIL                              | NIF
 4  | Shanelle Satterfield | shanelle.satterfield@not_gmail.com | 411111114Z
 ```
 
-### ORDERS
+- ORDERS
 
 ```
 ID | MERCHANT ID | SHOPPER ID | AMOUNT | CREATED AT           | COMPLETED AT
