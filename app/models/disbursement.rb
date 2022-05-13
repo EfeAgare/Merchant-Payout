@@ -1,6 +1,8 @@
 class Disbursement < ApplicationRecord
   belongs_to :order
 
+  validates :amount, presence: true
+  
   class << self
     def disburse_to_merchant(id, amount)
       create(order_id: id, amount: self.disburse_amount(amount))
@@ -11,14 +13,38 @@ class Disbursement < ApplicationRecord
     end
 
     def percentage(amount)
-      if amount.between?(50, 300)
-        0.0095
-      elsif amount > 300
-        0.0085
-      else
-        0.01
+      disbursement_range.each do |value| 
+        return value["percentage"] if amount.between?(value["minimum"], value["maximium"])
       end
+      # if amount.between?(50, 300)
+      #   0.0095
+      # elsif amount > 300
+      #   0.0085
+      # else
+      #   0.01
+      # end
     end
+  end
+
+
+  def disbursement_range 
+    [
+      {
+        "precentage": 0.01,
+        "minimum": 0,
+        "maximum": 50
+      },
+       {
+        "precentage": 0.0095,
+        "minimum": 50,
+        "maximum": 300
+       },
+       {
+        "precentage": 0.0085,
+        "minimum": 301,
+        "maximum": nil
+       }
+    ]
   end
 
   ## get the disbursement to a merchant when the merchant_id
